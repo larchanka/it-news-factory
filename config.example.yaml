@@ -1,0 +1,41 @@
+# IT News Factory Configuration Template
+
+telegram:
+  bot_token: "YOUR_TELEGRAM_BOT_TOKEN_HERE"
+  allowed_chat_ids:
+    - 123456789
+  debounce_seconds: 15
+  database_path: "queue.db"
+
+scraper:
+  user_agent: "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
+  screenshot_timeout_ms: 15000
+
+ollama:
+  host: "http://192.168.1.124:11434"
+  model: "qwen2.5-coder:14b"
+  temperature: 0.7
+
+tts:
+  model_path: "models/kokoro-v0_19.onnx"
+  voices_path: "models/voices.bin"
+  voice: "am_adam"
+  speed: 1.08
+
+concat:
+  config_path: "~/.config/concat/automation.json"
+  resolution: [1080, 1920]
+  fps: 30
+  background: "blur"
+  export_timeout_seconds: 180
+
+youtube:
+  client_secrets_file: "credentials/client_secret.json"
+  token_file: "credentials/token.json"
+  privacy_status: "public" # Note: requires verified GCP app or Internal Workspace
+  category_id: "28"        # Science & Technology
+  default_tags:
+    - "Shorts"
+    - "TechNews"
+    - "Programming"
+    - "AI"
